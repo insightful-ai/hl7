@@ -1,4 +1,4 @@
-package hl7 // import "fknsrs.biz/p/hl7"
+package hl7
 
 import (
 	"bytes"
@@ -163,6 +163,11 @@ func ParseMessage(buf []byte) (Message, *Delimiters, error) {
 
 		switch c {
 		case '\r':
+			if !sawNewline {
+				commitSegment(true)
+			}
+			sawNewline = true
+		case '\n':
 			if !sawNewline {
 				commitSegment(true)
 			}
