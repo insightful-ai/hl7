@@ -1,7 +1,6 @@
 hl7
 ===
 
-[![GoDoc](https://godoc.org/fknsrs.biz/p/hl7?status.svg)](https://godoc.org/fknsrs.biz/p/hl7)
 
 Overview
 --------
